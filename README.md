@@ -52,7 +52,8 @@ admin.site.register(Movies, MoviesAdmin)
 
 ## OUTPUT
 
-![alt text](<Screenshot 2025-09-08 143503.png>)
+<img width="1047" height="589" alt="image" src="https://github.com/user-attachments/assets/22c8a670-59e2-400c-8d52-70f038bd2be9" />
+
 
 
 ## RESULT
