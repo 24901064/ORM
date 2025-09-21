@@ -1,10 +1,9 @@
 # Ex02 Django ORM Web Application
-## Date: 14/09/2025
+## Date: 15/9/2025
 
 ## AIM
 To develop a Django application to store and retrieve data from Movies Database using Object Relational Mapping(ORM).
 
-## ENTITY RELATIONSHIP DIAGRAM
 
 
 
@@ -23,37 +22,32 @@ Enter the code for admin.py and models.py
 Execute Django admin and create details for 10 books
 
 ## PROGRAM
-
-MODELS.PY
-
 ```
+admin.py 
+
+from django.contrib import admin
+from .models import Movies, MoviesAdmin
+admin.site.register(Movies,MoviesAdmin)
+
+
+models.py
+
 from django.db import models
 from django.contrib import admin
 class Movies(models.Model):
-    M_ID=models.IntegerField(primary_key=True)
-    M_name=models.CharField(max_length=100)
+    M_ID = models.IntegerField(primary_key=True)
+    M_name = models.CharField(max_length=100)
     Release_date=models.DateField()
-    Director=models.CharField(max_length=50)
-    Actors=models.CharField(max_length=100)
+    Director=models. CharField(max_length=50)
+    Actors=models. CharField(max_length=100)
  
 class MoviesAdmin(admin.ModelAdmin):
-    list_display=('M_ID','M_name','Release_date','Director','Actors')  
-
-
+    list_display=('M_ID','M_name','Release_date', 'Director','Actors')
 ```
-ADMIN.PY
-```
-from django.contrib import admin
-from .models import Movies, MoviesAdmin
-admin.site.register(Movies, MoviesAdmin)
-
-```
-
 
 ## OUTPUT
 
-<img width="1047" height="589" alt="image" src="https://github.com/user-attachments/assets/22c8a670-59e2-400c-8d52-70f038bd2be9" />
-
+![alt text](<Screenshot 2025-09-15 173941.png>)
 
 
 ## RESULT
